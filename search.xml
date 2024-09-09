@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>computer vision -- object detection</title>
+      <link href="/2024/09/09/computer-vision-object-detection/"/>
+      <url>/2024/09/09/computer-vision-object-detection/</url>
+      
+        <content type="html"><![CDATA[<h4 id="computer-vision"><a href="#computer-vision" class="headerlink" title="computer vision"></a>computer vision</h4><p>procedure: </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A(data collection) --&gt; B(model training) </span><br><span class="line">B --&gt; C(mdoel estimation) </span><br><span class="line">C --&gt; D(model optimization) </span><br><span class="line">D --&gt; F(model deployment)</span><br></pre></td></tr></table></figure><h5 id="object-detection"><a href="#object-detection" class="headerlink" title="object detection:"></a>object detection:</h5><p><a href="https://zhuanlan.zhihu.com/p/242424344">图像目标检测算法总结（从R-CNN到YOLO v3） - 知乎 (zhihu.com)</a></p><p>One - stage:<br>单一网络模型，同时进行物体位置和类别分类<br>直接在输入图像上生成候选目标框，并利用分类器进行分类<br>采用单阶段一次完成的方式，因此速度较快，计算成本较低<br>主要代表算法：YOLO (you look only once)，SSD (single shot multibox dectector)<br>在小目标的定位和检测上，由于候选框过于密集，容易产生较高的误检率</p><p>Two - stage:<br>含两个独立网络模型：生成候选目标框的区域建议网络（region proposal network, RPN）和对这些框进行分类和边界框回归的网络<br>先利用RPN生成候选框，然后再对这些框进行分类和定位<br>主要代表算法：faster R-CNN (region convolutional neural network)<br>精度更高，减少误检率<br>需要两个阶段的计算，因此速度较慢，计算成本更高<br>在大目标和复杂场景中，能够更好的检测性能</p><p>common algorithms: </p><ul><li>ResNet: deep residual neural network (He 2015: [<a href="https://arxiv.org/abs/1512.03385">1512.03385] Deep Residual Learning for Image Recognition (arxiv.org)</a>) </li><li>RetinaNet: an efficient object detection network based on ResNet (Lin 2017: <a href="https://ieeexplore.ieee.org/document/8237586">Focal Loss for Dense Object Detection | IEEE Conference Publication | IEEE Xplore</a>)</li><li></li></ul><p>negative sampling：<a href="http://www.360doc.com/content/22/0217/18/7673502_1017835853.shtml">负采样，永远的神！ (360doc.com)</a></p><p>遥感图像目标检测（含遥感数据链接）：<a href="https://www.zhihu.com/question/655567158/answer/3494923321">(11 封私信 &#x2F; 80 条消息) 研一，遥感图像目标检测，一直感觉云里雾里，代码能力也很差，这个该怎么入门，大佬们有什么推荐的网课吗？ - 知乎 (zhihu.com)</a></p><p>遥感应用软件：ENVI，ARCGIS，MapInfo</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> cv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>matplotlib 添加多重图例</title>
       <link href="/2024/07/27/matplotlib-multi-legend/"/>
       <url>/2024/07/27/matplotlib-multi-legend/</url>
