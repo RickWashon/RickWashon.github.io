@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"rickwashon.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="computer visionprocedure:  12345graph LRA(data collection) --&gt; B(model training) B --&gt; C(mdoel estimation) C --&gt; D(model optimization) D --&gt; F(model deployment)      object detection: One">
+  <meta name="description" content="computer visionprocedure:  12345graph LRA(data collection) --&gt; B(model training) B --&gt; C(mdoel estimation) C --&gt; D(model optimization) D --&gt; F(model deployment)      object detection: 传统目标">
 <meta property="og:type" content="article">
 <meta property="og:title" content="computer vision -- object detection">
 <meta property="og:url" content="https://rickwashon.github.io/2024/09/09/computer-vision-object-detection/index.html">
 <meta property="og:site_name" content="Rick Washon">
-<meta property="og:description" content="computer visionprocedure:  12345graph LRA(data collection) --&gt; B(model training) B --&gt; C(mdoel estimation) C --&gt; D(model optimization) D --&gt; F(model deployment)      object detection: One">
+<meta property="og:description" content="computer visionprocedure:  12345graph LRA(data collection) --&gt; B(model training) B --&gt; C(mdoel estimation) C --&gt; D(model optimization) D --&gt; F(model deployment)      object detection: 传统目标">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-09T15:56:05.000Z">
-<meta property="article:modified_time" content="2024-09-12T12:40:16.896Z">
+<meta property="article:modified_time" content="2024-09-12T12:47:49.685Z">
 <meta property="article:author" content="Tu Yun">
 <meta property="article:tag" content="cv">
 <meta name="twitter:card" content="summary">
@@ -215,7 +215,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-12 20:40:16" itemprop="dateModified" datetime="2024-09-12T20:40:16+08:00">2024-09-12</time>
+                <time title="Modified: 2024-09-12 20:47:49" itemprop="dateModified" datetime="2024-09-12T20:47:49+08:00">2024-09-12</time>
               </span>
 
           
@@ -251,12 +251,17 @@
 
 
 <h4 id="object-detection"><a href="#object-detection" class="headerlink" title="object detection:"></a>object detection:</h4><ul>
+<li><p>传统目标检测方法</p>
+<p>Selective Search</p>
+<p>Deformable Part Model</p>
+</li>
 <li><p>One - stage:<br>单一网络模型，同时进行物体位置和类别分类<br>直接在输入图像上生成候选目标框，并利用分类器进行分类<br>采用单阶段一次完成的方式，因此速度较快，计算成本较低<br>Bads: 在小目标的定位和检测上，由于候选框过于密集，容易产生较高的误检率<br>主要代表算法：YOLO (you only look once)，SSD (single shot multibox dectector)，RetinaNet</p>
 </li>
 <li><p>Two - stage:<br>含两个独立网络模型：生成候选目标框的区域建议网络（region proposal network, RPN）和对这些框进行分类和边界框回归的网络<br>先利用RPN生成候选框，然后再对这些框进行分类和定位<br>精度更高，减少误检率，在大目标和复杂场景中，能够更好的检测性能<br>Bads: 需要两个阶段的计算，因此速度较慢，计算成本更高<br>主要代表算法：faster R-CNN (region convolutional neural network), mask R-CNN</p>
 </li>
 </ul>
-<h5 id="R-CNN的发展："><a href="#R-CNN的发展：" class="headerlink" title="R-CNN的发展："></a>R-CNN的发展：</h5><ol>
+<h5 id="R-CNN的发展："><a href="#R-CNN的发展：" class="headerlink" title="R-CNN的发展："></a>R-CNN的发展：</h5><p>Two-stage detection 的代表</p>
+<ol>
 <li>stage I: R-CNN。<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1311.2524">Ross Grishick 2013</a>  <strong>首次</strong>将深度神经网络应用到目标检测。<br>先使用selective search算法提取2000个候选框，然后通过卷积网络对候选框进行串行的特征提取，再根据提取的特征使用SVM对候选框进行分类预测，最后使用回归方法对区域框进行修正。<br>bads：<ul>
 <li>selective search 每个region费时2s；</li>
 <li>串行提取特征；</li>
@@ -270,7 +275,8 @@
 <li>stage VI: cascade R-CNN。 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1712.00726">Zhaowei Cai 2019</a><br>变 two-stage为multi-stage, 对每一阶段采取递增的IoU进行训练，减少mismatch的情况</li>
 </ol>
 <h5 id="SPP-net"><a href="#SPP-net" class="headerlink" title="SPP-net"></a>SPP-net</h5><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1406.4729">Kaiming He 2014</a>  首先提出空间金字塔池化，解决了R-CNN中每一个region proposal都要过一次CNN的缺点，直接对整张图片过一次CNN提取特征，然后在CNN的feature map上进行候选区域框定和特征向量化。这一方法被吸收到fast R-CNN上。 </p>
-<h5 id="Yolo-的发展"><a href="#Yolo-的发展" class="headerlink" title="Yolo 的发展"></a>Yolo 的发展</h5><ol>
+<h5 id="Yolo-的发展"><a href="#Yolo-的发展" class="headerlink" title="Yolo 的发展"></a>Yolo 的发展</h5><p>one-stage detection的开山之作。之前的物体检测方法均是基于先产生候选区再检测的方法，虽然有相对较高的检测准确率，但运行速度较慢。YOLO创造性的将物体检测任务直接当作回归问题（regression problem）来处理，将候选区和检测两个阶段合二为一。只需一眼就能知道每张图像中有哪些物体以及物体的位置。</p>
+<ol>
 <li>Stage I：YOLO  <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1506.02640">Joseph Redmon 2015</a><br>首先，将整个图像分成S × S 的小格子（cell），对于每个格子，分别预测B 个bbox，以及C 个类别的条件概率（注意是条件概率，即已经确定有目标的情况下，该目标属于哪个类别的概率，因此不需要对每个bbox 分别预测类别，每个格子只预测一个概率向量即可）。每个bbox 都有5 个变量，分别是四个描述位置坐标的值，以及一个objectness，即是否有目标（相当于RPN 网络里的那个前景&#x2F;背景预测）。这样一来，每个格子需要输出5B+C 维度的向量，因此，CNN 最终的输出的tensor 的形态为S × S × (5B + C)<br>Bads: 网格稀疏，每个cell的bbox也只有2个；对于小物体检测不灵敏，定位准确性差</li>
 <li>stage II：YOLOv2(YOLO9000)  <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1612.08242">Joseph Redmon 2016</a><br>采用Darknet-19而非vgg-16做backbone，利用层级结构的标签WordTree，从而使得YOLOv2能够识别9000+类别物体。</li>
 <li>stage III：YOLOv3   <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1804.02767">Joseph Redmon 2018</a><br>在Darknet-19基础上引入了残差块，加深网络至53个卷积层，取名Darknet-53。采用FPN网络，对最后3层特征图分别进行独立预测，用k-means聚类9种anchor box然后均匀分配给3种特征层。同时采用单类别的binary logistic来分类，代替全类别的softmax，有利于处理目标重叠的情况。</li>
