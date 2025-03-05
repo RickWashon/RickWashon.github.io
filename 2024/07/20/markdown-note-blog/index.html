@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rickwashon.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"order":-1}},"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="How to use markdown on Typora[TOC] 1. Headlineuse #headline to write a headline. The second headline is ##headline2 and so forth till 6th headline. 2. split lineuse --- to establish a split line. more">
+<meta property="og:type" content="article">
+<meta property="og:title" content="notes on markdown">
+<meta property="og:url" content="https://rickwashon.github.io/2024/07/20/markdown-note-blog/index.html">
+<meta property="og:site_name" content="Rick Washon">
+<meta property="og:description" content="How to use markdown on Typora[TOC] 1. Headlineuse #headline to write a headline. The second headline is ##headline2 and so forth till 6th headline. 2. split lineuse --- to establish a split line. more">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://rickwashon.github.io/Users/rick/Library/Application%20Support/typora-user-images/image-20181227012827834.png">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/006tNbRwly1g9jko5c6pvj30n603djrk.jpg">
+<meta property="article:published_time" content="2024-07-20T12:59:58.000Z">
+<meta property="article:modified_time" content="2025-03-05T18:48:39.084Z">
+<meta property="article:author" content="Tu Yun">
+<meta property="article:tag" content="markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://rickwashon.github.io/Users/rick/Library/Application%20Support/typora-user-images/image-20181227012827834.png">
+
+<link rel="canonical" href="https://rickwashon.github.io/2024/07/20/markdown-note-blog/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>notes on markdown | Rick Washon</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Rick Washon</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Ph.D UCAS</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://rickwashon.github.io/2024/07/20/markdown-note-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tu Yun">
+      <meta itemprop="description" content="Astrophysics: galaxy and cosmology">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rick Washon">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          notes on markdown
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-07-20 20:59:58" itemprop="dateCreated datePublished" datetime="2024-07-20T20:59:58+08:00">2024-07-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-03-06 02:48:39" itemprop="dateModified" datetime="2025-03-06T02:48:39+08:00">2025-03-06</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2024/07/20/markdown-note-blog/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2024/07/20/markdown-note-blog/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="How-to-use-markdown-on-Typora"><a href="#How-to-use-markdown-on-Typora" class="headerlink" title="How to use markdown on Typora"></a>How to use markdown on Typora</h1><p>[TOC]</p>
+<h3 id="1-Headline"><a href="#1-Headline" class="headerlink" title="1. Headline"></a>1. Headline</h3><p>use <code>#headline</code> to write a headline. The second headline is <code>##headline2</code> and so forth till 6th headline.</p>
+<h3 id="2-split-line"><a href="#2-split-line" class="headerlink" title="2. split line"></a>2. split line</h3><p>use <code>---</code> to establish a split line. more than three(included) <code>-</code> ,<code>*</code>, <code>_</code>, or <code>+</code>would also do.</p>
+<h3 id="3-font"><a href="#3-font" class="headerlink" title="3. font"></a>3. font</h3><p><code>**bold**</code> for <strong>bold</strong>,</p>
+<p><code>*italic*</code> for <em>italic</em>,</p>
+<p><code>***itlic bold***</code> for <em><strong>italic bold</strong></em> and</p>
+<p><code>~~crossline~~</code> for <del>crossline</del></p>
+<h3 id="4-quotation"><a href="#4-quotation" class="headerlink" title="4. quotation"></a>4. quotation</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">code:</span><br><span class="line">&gt;first order quotation</span><br><span class="line">&gt;&gt;second order quotation</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Nth order quotion</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>first order quotation</p>
+<blockquote>
+<p>second order quotation<br>…</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Nth order quotion</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="5-Category-creating"><a href="#5-Category-creating" class="headerlink" title="5. Category creating"></a>5. Category creating</h3><p>easy to use, simply type <code>[TOC]</code> and you get the category out of headlines</p>
+<p><img src="/Users/rick/Library/Application%20Support/typora-user-images/image-20181227012827834.png" alt="category"></p>
+<h3 id="6-Code-blocks"><a href="#6-Code-blocks" class="headerlink" title="6. Code blocks"></a>6. Code blocks</h3><h4 id="1-inline-tags"><a href="#1-inline-tags" class="headerlink" title="1. inline tags"></a>1. inline tags</h4><p>use &#96; on both sides of tagged content for one line codes</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`hello world, print()`</span></span><br></pre></td></tr></table></figure>
+
+<p><code>hello world, print()</code></p>
+<h4 id="2-Multiline-code-blocks"><a href="#2-Multiline-code-blocks" class="headerlink" title="2. Multiline code blocks"></a>2. Multiline code blocks</h4><p>use &#96;&#96;&#96; on both sides to creat code blocks</p>
+<p>Code:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```python</span></span><br><span class="line"><span class="code">a = 1</span></span><br><span class="line"><span class="code">b = 2</span></span><br><span class="line"><span class="code">a + b</span></span><br><span class="line"><span class="code">&gt;&gt;&gt; 3</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+
+<p>Result:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">a + b </span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p><code>python</code> closely after &#96;&#96;&#96;&#96;&#96; tells what language and so what color of words to present</p>
+<h3 id="7-Links-of-website-pic-video"><a href="#7-Links-of-website-pic-video" class="headerlink" title="7. Links of website, pic, video"></a>7. Links of website, pic, video</h3><ol>
+<li><code>[百度](https://www.baidu.com/)</code></li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a></p>
+<ol start="2">
+<li><p><code>[百度2][baidu]</code><br><code>[baidu]: https://ww.baidu.com</code></p>
+</li>
+<li><p><code>&lt;https://www.baidu.com&gt;</code></p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a></p>
+<ol start="4">
+<li>Mail:  <code>&lt;tuy@mail.sustc.edu.cn&gt;</code></li>
+</ol>
+<p><a href="mailto:&#x74;&#x75;&#x79;&#x40;&#109;&#x61;&#x69;&#x6c;&#46;&#x73;&#x75;&#115;&#x74;&#99;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;">&#x74;&#x75;&#x79;&#x40;&#109;&#x61;&#x69;&#x6c;&#46;&#x73;&#x75;&#115;&#x74;&#99;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;</a></p>
+<ol start="5">
+<li>Pictures. (some might not load)</li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9jko5c6pvj30n603djrk.jpg" alt="image-20191203153619763"></p>
+<ol start="6">
+<li><p>Online videos</p>
+<p><code>&lt;iframe height=498 width=850 src=&#39;https://www.bilibili.com/video/av1205827/?spm_id_from=333.788.videocard.19&#39; frameborder=0 &#39;allowfullscreen&#39;&gt;&lt;/iframe&gt;</code></p>
+</li>
+</ol>
+<h3 id="8-list"><a href="#8-list" class="headerlink" title="8. list"></a>8. list</h3><ol>
+<li><p>this is list one</p>
+<ol>
+<li><code> 1. this is list one</code></li>
+</ol>
+</li>
+<li><p>list 2</p>
+<ul>
+<li><p><code>* list 2</code></p>
+</li>
+<li><p>list 2</p>
+<p>​	<code>var a = 10; //code in lists</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="9-task-management"><a href="#9-task-management" class="headerlink" title="9. task management"></a>9. task management</h3><p><code>- [x] Task 1</code></p>
+<p><code>- [ ] Task 2</code></p>
+<p>Remember that for undone tasks, you need to add space in <code>[ ]</code>.</p>
+<ul>
+<li><p><input checked="" disabled="" type="checkbox"> 
+Task 1</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+Task 2</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+Task 3</p>
+</li>
+</ul>
+<h3 id="10-Charts"><a href="#10-Charts" class="headerlink" title="10. Charts"></a>10. Charts</h3><h4 id="1-table"><a href="#1-table" class="headerlink" title="1. table"></a>1. table</h4><p>start a new line with <code>|----|----|</code> and “enter” when finished. Adjustments could be made later like word&#x2F;excel.</p>
+<table>
+<thead>
+<tr>
+<th align="center">name</th>
+<th align="center">gender</th>
+<th align="center">major</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="2-Charts"><a href="#2-Charts" class="headerlink" title="2. Charts"></a>2. Charts</h4><h3 id="11-Flow-chart"><a href="#11-Flow-chart" class="headerlink" title="11. Flow chart"></a>11. Flow chart</h3><ul>
+<li><p><strong>notice</strong> that when typing <code>st=&gt;start: begining sentence</code> there is a blankspace after <code>:</code> and the same for other five type of  <em>var</em>: <code>end, operation, subroutine, condition, and inputoutput</code></p>
+</li>
+<li><p>Also be <strong>careful</strong> that <code>cond(yes)</code> and <code>cond(no)</code> should come closely next to its former flow sentence and no blankspace should be placed. For example, codes like this doesn’t work:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">st-&gt;op-&gt;cond</span><br><span class="line"></span><br><span class="line">cond(yes)-&gt;io-&gt;end</span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: input x</span><br><span class="line">op=&gt;operation: x + 1</span><br><span class="line">cond=&gt;condition: x &gt; 10</span><br><span class="line">io=&gt;inputoutput: x</span><br><span class="line">sub=&gt;subroutine: x * 2</span><br><span class="line">e=&gt;end: end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub(right)-&gt;op</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-Font-color-size-face"><a href="#12-Font-color-size-face" class="headerlink" title="12. Font color, size, face"></a>12. Font color, size, face</h3><h3 id="13-Escape-character-转义字符"><a href="#13-Escape-character-转义字符" class="headerlink" title="13. Escape character (转义字符)"></a>13. Escape character (转义字符)</h3><p>use HTML notations <code>\</code> before every character that contrast with markdown programming.</p>
+<p><strong>code</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\\  //反斜杠</span><br><span class="line">\`  //反引号</span><br><span class="line">\*  //星号</span><br><span class="line">\&#123;\&#125; //大括号</span><br></pre></td></tr></table></figure>
+
+<p><strong>demo</strong></p>
+<p>\</p>
+<p>&#96;</p>
+<ul>
+<li></li>
+</ul>
+<p>{}</p>
+<h3 id="14-Comment"><a href="#14-Comment" class="headerlink" title="14. Comment"></a>14. Comment</h3><p>Outside of comments <code>&lt;!-- comments --&gt;</code> outside of comments</p>
+<p>Outside of commentsoutside of comments</p>
+<h3 id="15-In-text-Jump-to"><a href="#15-In-text-Jump-to" class="headerlink" title="15. In-text Jump-to"></a>15. In-text Jump-to</h3><ul>
+<li>use HTML tags to achieve this purpose, only works on html formed file, unavilable on pdf; <code>&quot; &quot;</code>or <code>&#39; &#39;</code>or adding no quotation marks also works</li>
+</ul>
+<ol>
+<li><p>define a tag: <code>&lt;span id=&quot;jump&quot;&gt;destination&lt;/span&gt;</code></p>
+</li>
+<li><p>jump to: <code>[click to jump](#jump)</code></p>
+<p>Demo:</p>
+<p>hello world</p>
+<p><a href="#jump">hello</a></p>
+</li>
+</ol>
+<ul>
+<li>use link to jump, only works for headlines</li>
+</ul>
+<ol>
+<li>[click to jump](#8. List)</li>
+</ol>
+<h3 id="16-Cross-reference"><a href="#16-Cross-reference" class="headerlink" title="16. Cross reference"></a>16. Cross reference</h3><p>to be continued…</p>
+<h3 id="17-Math"><a href="#17-Math" class="headerlink" title="17 Math"></a>17 Math</h3><ol>
+<li><p><strong>Parentheses</strong>: <code>(\frac&#123;&#125;&#123;&#125;)</code> gives small parentheses: $(\frac{\sqrt a}{y^3})$, while <code>\left(...\right)</code> helps adjust the size of parentheses. <code>\left(\frac&#123;1&#125;&#123;2a&#125;\right)</code> gives $\left(\frac{\sqrt a}{y^3}\right)$.</p>
+<p><code>\lbrace</code> gives $\lbrace$ , <code>\rbrace</code> gives $\rbrace$. There are also invisible parentheses, denoted by <code>.</code>: <code>\left.\frac12\right\rbrace</code> is $\left.\frac12\right\rbrace$. <code>\left\lbrace\frac12\right.</code> is $\left\lbrace\frac12\right.$ which is useful in array or multilined equations.</p>
+</li>
+<li><p><strong>Fracetions</strong>: <code>\frac&#123;..&#125;&#123;..&#125;</code> and <code>&#123;..\over..&#125;</code> show the same thing ${a+\sqrt x \over \int_0^\infin x{\rm d}x}$. Remember that <code>\cfrac</code> gives continued fraction $\cfrac{a_1}{a_2+\cfrac{1}{a_3+\cfrac{1}{a_4}}}$. Also gives a larger and better format for $\cfrac{a+\sqrt x}{\int_0^\infty x{\rm d}x}$.</p>
+</li>
+<li><p><strong>special functions</strong>: <code>\lim_&#123;x\to 0&#125;</code> gives $\lim_{x\to 0}$, <code>\displaystyle</code> gives $\displaystyle \lim_{x\to 0}$. <code>$\sum\limits_&#123;x\to 0&#125;^\infty$</code> gives $\sum\limits_{x\to 0}^\infty$</p>
+</li>
+<li><p><strong>space</strong>: <code>a\ b</code> gives a small space $a\ b$, while <code>a\quad b</code> gives a larger space $a\quad b$, <code>a\qquad b</code> rather larger $a\qquad b$.</p>
+</li>
+<li><p><strong>dots</strong>: <code>\ldots</code> gives $a_1,a_2,\ldots,a_n$ while <code>\cdots</code> gives $a_1+a_2+\cdots+a_n$. Note that there are vertical dots and inclined dots: <code>\vdots</code> and <code>ddots</code> give $\vdots$ and $\ddots$ which are useful in matrix. be careful that <code>\ddot</code> is $\ddot x$ and <code>\dddot</code> gives $\dddot x$</p>
+</li>
+<li><p><strong>aligned equations</strong>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;align&#125;</span><br><span class="line">y &amp;= \sqrt &#123;x^2&#125; + \frac&#123;ax^3+bx^2&#125;&#123;x^4+x^2&#125; \\</span><br><span class="line">&amp;= x + \frac&#123;ax+b&#125;&#123;x^2+1&#125;\\</span><br><span class="line">\end&#123;align&#125;</span><br></pre></td></tr></table></figure>
+
+<p>is</p>
+<p>$$<br>\begin{align}<br>y &amp;&#x3D; \sqrt {x^2} + \frac{ax^3+bx^2}{x^4+x^2} \<br>&amp;&#x3D; x + \frac{ax+b}{x^2+1}\<br>\end{align}<br>$$</p>
+</li>
+<li><p><strong>Custom command</strong>: <code>$ \newcommand&#123;\SES&#125;[3]&#123;0 \to #1 \to #2 \to #3 \to 0&#125; $</code> gives $\newcommand{\SES}[3]{0 \to #1 \to #2 \to #3 \to 0}$ $\SES{A}{B}{C}$.  (noting that there is a piece of code unseen before the result). <code>\def</code> does the same work: <code>\def \ses#1#2#3&#123;0\to #1\to #2\to #3\to 0&#125;</code></p>
+</li>
+<li></li>
+<li></li>
+</ol>
+<h3 id="18-New-line"><a href="#18-New-line" class="headerlink" title="18 New line"></a>18 New line</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a b c space space shift+enter</span><br><span class="line">a b</span><br></pre></td></tr></table></figure>
+
+<p>a b c<br>a b</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a b c shit+enter</span><br><span class="line">a b</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>a b c<br>a b</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a b c enter</span><br><span class="line">a b</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>a b c</p>
+<p>a b</p>
+<p>Line spaces are different between using <code>shft+enter</code> and <code>enter</code> alone, having two spaces before <code>shift+enter</code> creates new line in exported files like pdf while not having them doesn’t.</p>
+<h3 id="19-两端对齐"><a href="#19-两端对齐" class="headerlink" title="19. 两端对齐"></a>19. 两端对齐</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align:justify; text-justify:inter-ideograph;&gt;HTML如何让文本两端对齐HTML如何让文本两端对齐HTML如何让文本两端对齐HTML如何让文本两端对齐HTML如何让文本两端对齐HTML如何让文本两端对齐&lt;/p&gt;</span></span></span><br><span class="line"><span class="string"><span class="tag">　　text-align:justify:这是文本对齐标签只是英文字体有效果，中文字体没有作用，如果想中文也能两端对齐就加上text-justify:inter-ideograph。</span></span></span><br><span class="line"><span class="string"><span class="tag"></span></span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/markdown/" rel="tag"># markdown</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/07/20/hexo_note/" rel="next" title="hexo_note">
+      hexo_note <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-use-markdown-on-Typora"><span class="nav-number">1.</span> <span class="nav-text">How to use markdown on Typora</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Headline"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. Headline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-split-line"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. split line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-font"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. font</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-quotation"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. quotation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Category-creating"><span class="nav-number">1.0.5.</span> <span class="nav-text">5. Category creating</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Code-blocks"><span class="nav-number">1.0.6.</span> <span class="nav-text">6. Code blocks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-inline-tags"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">1. inline tags</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Multiline-code-blocks"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">2. Multiline code blocks</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Links-of-website-pic-video"><span class="nav-number">1.0.7.</span> <span class="nav-text">7. Links of website, pic, video</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-list"><span class="nav-number">1.0.8.</span> <span class="nav-text">8. list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-task-management"><span class="nav-number">1.0.9.</span> <span class="nav-text">9. task management</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-Charts"><span class="nav-number">1.0.10.</span> <span class="nav-text">10. Charts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-table"><span class="nav-number">1.0.10.1.</span> <span class="nav-text">1. table</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Charts"><span class="nav-number">1.0.10.2.</span> <span class="nav-text">2. Charts</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-Flow-chart"><span class="nav-number">1.0.11.</span> <span class="nav-text">11. Flow chart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-Font-color-size-face"><span class="nav-number">1.0.12.</span> <span class="nav-text">12. Font color, size, face</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-Escape-character-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">1.0.13.</span> <span class="nav-text">13. Escape character (转义字符)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-Comment"><span class="nav-number">1.0.14.</span> <span class="nav-text">14. Comment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-In-text-Jump-to"><span class="nav-number">1.0.15.</span> <span class="nav-text">15. In-text Jump-to</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-Cross-reference"><span class="nav-number">1.0.16.</span> <span class="nav-text">16. Cross reference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-Math"><span class="nav-number">1.0.17.</span> <span class="nav-text">17 Math</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-New-line"><span class="nav-number">1.0.18.</span> <span class="nav-text">18 New line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E4%B8%A4%E7%AB%AF%E5%AF%B9%E9%BD%90"><span class="nav-number">1.0.19.</span> <span class="nav-text">19. 两端对齐</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Tu Yun</p>
+  <div class="site-description" itemprop="description">Astrophysics: galaxy and cosmology</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+      
+    </div>
+    
+    <div class="card-announcement">
+        <div class="card-content">
+          <div class="item_headline">
+          <i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i>
+          <span>notice</span>
+        </div>
+          <div class="announcement_content">
+            Thank you for being so handsome and beautiful and visiting my blog! If you like it, remember to bookmark it.
+          </div>
+        </div>
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tu Yun</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'MC9w12WT8luU7H6xT446MvkP-MdYXbMMI',
+      appKey     : 'JA1QawPMxNGvYdHXyh0L2JoM',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : 'https://mc9w12wt.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
