@@ -643,7 +643,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     new Valine({
       el         : '#valine-comments',
       verify     : false,
-      notify     : false,
+      notify     : true,
       appId      : 'MC9w12WT8luU7H6xT446MvkP-MdYXbMMI',
       appKey     : 'JA1QawPMxNGvYdHXyh0L2JoM',
       placeholder: "Just go go",
@@ -651,7 +651,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : false,
-      lang       : 'zh-cn' || 'zh-cn',
+      lang       : '' || 'zh-cn',
       path       : location.pathname,
       recordIP   : false,
       serverURLs : 'https://mc9w12wt.api.lncldglobal.com'

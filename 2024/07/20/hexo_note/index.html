@@ -28,7 +28,7 @@
 <meta property="og:description" content="This blog is established with hexo.  follow the guidline by huanhao The official hexo docs  are the best book you need: Hexo you can write a new blog with typora. Begin with front matter: 12345678---t">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-07-20T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-07-21T15:21:55.442Z">
+<meta property="article:modified_time" content="2025-03-05T17:16:23.610Z">
 <meta property="article:author" content="Tu Yun">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -215,7 +215,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-07-21 23:21:55" itemprop="dateModified" datetime="2024-07-21T23:21:55+08:00">2024-07-21</time>
+                <time title="Modified: 2025-03-06 01:16:23" itemprop="dateModified" datetime="2025-03-06T01:16:23+08:00">2025-03-06</time>
               </span>
 
           
@@ -248,6 +248,22 @@
 <p>The official hexo docs  are the best book you need: <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
 <p>you can write a new blog with typora. Begin with front matter:</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo<span class="emphasis">_note</span></span><br><span class="line"><span class="emphasis">date: 2024-07-20</span></span><br><span class="line"><span class="emphasis">tags: hexo</span></span><br><span class="line"><span class="emphasis">---</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">This blog is established with hexo</span></span><br><span class="line"><span class="emphasis">....</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>use valine comments system supported by leancloud,  config your theme _config.yml file.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Valine</span></span><br><span class="line"><span class="section"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span></span><br><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid: xxxxxxx   # Your leancloud application appid</span><br><span class="line">  appkey: xxxxxx   # Your leancloud application appkey</span><br><span class="line">  serverURLs: https://xxxxxxxx.api.lncldglobal.com  # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)</span><br><span class="line">  notify: False # Mail notifier</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: Just go go # Comment box placeholder</span><br><span class="line">  avatar: mm # Gravatar style</span><br><span class="line">  guest<span class="emphasis">_info: nick,mail,link # Custom comment header</span></span><br><span class="line"><span class="emphasis">  pageSize: 10 # Pagination size</span></span><br><span class="line"><span class="emphasis">  language:  # Language, available values: en, zh-cn</span></span><br><span class="line"><span class="emphasis">  visitor: false # Article reading statistic</span></span><br><span class="line"><span class="emphasis">  comment_</span>count: true # If false, comment count will only be displayed in post page, not in home page</span><br><span class="line">  recordIP: false # Whether to record the commenter IP</span><br><span class="line">  #post<span class="emphasis">_meta_</span>order: 0</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>if you don’t want comments in certain pages, set comments as False like below</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo<span class="emphasis">_note</span></span><br><span class="line"><span class="emphasis">date: 2024-07-20</span></span><br><span class="line"><span class="emphasis">comments: False</span></span><br><span class="line"><span class="emphasis">---</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">This blog is established with hexo</span></span><br><span class="line"><span class="emphasis">....</span></span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
     </div>
@@ -467,7 +483,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     new Valine({
       el         : '#valine-comments',
       verify     : false,
-      notify     : false,
+      notify     : true,
       appId      : 'MC9w12WT8luU7H6xT446MvkP-MdYXbMMI',
       appKey     : 'JA1QawPMxNGvYdHXyh0L2JoM',
       placeholder: "Just go go",
@@ -475,7 +491,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : false,
-      lang       : 'zh-cn' || 'zh-cn',
+      lang       : '' || 'zh-cn',
       path       : location.pathname,
       recordIP   : false,
       serverURLs : 'https://mc9w12wt.api.lncldglobal.com'
